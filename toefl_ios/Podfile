@@ -1,6 +1,6 @@
 platform :ios, '7.0'
 target 'toefl_ios' do
-pod 'FMDB/SQLCipher'
+pod 'FMDB', '~> 2.7.2'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'MJRefresh', '~> 3.1.12'
 end

@@ -24,15 +24,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SQLCipher.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>018896F7A09D0A7EA34F3314A3194B4A</key>
+		<key>0127AA460CCEE923D4F9891A4EBE9606</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBB1C3FAF3A27BB47FCECCDB11203772</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E717045B5451A9293C1C2D5BA968E481</key>
+		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,10 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A927B41F6B603200AEB888 /* CommomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927951F6B603200AEB888 /* CommomTableViewController.m */; };
+		27A927B51F6B603200AEB888 /* CommonNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927971F6B603200AEB888 /* CommonNavigationViewController.m */; };
+		27A927B61F6B603200AEB888 /* CommonTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927991F6B603200AEB888 /* CommonTabbarViewController.m */; };
+		27A927B71F6B603200AEB888 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9279B1F6B603200AEB888 /* CommonViewController.m */; };
+		27A927B81F6B603200AEB888 /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9279D1F6B603200AEB888 /* TabbarViewController.m */; };
+		27A927B91F6B603200AEB888 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927A11F6B603200AEB888 /* NSString+Utils.m */; };
+		27A927BA1F6B603200AEB888 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927A31F6B603200AEB888 /* UIView+Utils.m */; };
+		27A927BB1F6B603200AEB888 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927A51F6B603200AEB888 /* UIViewController+Utils.m */; };
+		27A927BC1F6B603200AEB888 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927A71F6B603200AEB888 /* CustomButton.m */; };
+		27A927BD1F6B603200AEB888 /* CustomSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927A91F6B603200AEB888 /* CustomSegment.m */; };
+		27A927C01F6B603200AEB888 /* SegmentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927AF1F6B603200AEB888 /* SegmentLabel.m */; };
+		27A927C11F6B603200AEB888 /* TabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927B11F6B603200AEB888 /* TabbarItem.m */; };
+		27A927C21F6B603200AEB888 /* TabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927B31F6B603200AEB888 /* TabbarView.m */; };
+		27A927C51F6B615D00AEB888 /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927C41F6B615D00AEB888 /* WordViewController.m */; };
+		27A927C91F6B618000AEB888 /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927C81F6B618000AEB888 /* ListenViewController.m */; };
+		27A927CD1F6B619700AEB888 /* CompositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927CC1F6B619700AEB888 /* CompositionViewController.m */; };
+		27A927D21F6B61BF00AEB888 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927D01F6B61BF00AEB888 /* ProfileViewController.m */; };
+		27A927D31F6B61BF00AEB888 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A927D11F6B61BF00AEB888 /* ProfileViewController.xib */; };
+		27A927D71F6B796800AEB888 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927D61F6B796800AEB888 /* Word.m */; };
+		27A927E51F6B7AB500AEB888 /* tab_composition_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927D91F6B7AB500AEB888 /* tab_composition_normal@2x.png */; };
+		27A927E61F6B7AB500AEB888 /* tab_composition_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927DA1F6B7AB500AEB888 /* tab_composition_normal@3x.png */; };
+		27A927E71F6B7AB500AEB888 /* tab_composition_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927DB1F6B7AB500AEB888 /* tab_composition_selected@2x.png */; };
+		27A927E81F6B7AB500AEB888 /* tab_composition_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927DC1F6B7AB500AEB888 /* tab_composition_selected@3x.png */; };
+		27A927E91F6B7AB500AEB888 /* tab_listen_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927DD1F6B7AB500AEB888 /* tab_listen_normal@2x.png */; };
+		27A927EA1F6B7AB500AEB888 /* tab_listen_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927DE1F6B7AB500AEB888 /* tab_listen_normal@3x.png */; };
+		27A927EB1F6B7AB500AEB888 /* tab_listen_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927DF1F6B7AB500AEB888 /* tab_listen_selected@2x.png */; };
+		27A927EC1F6B7AB500AEB888 /* tab_listen_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927E01F6B7AB500AEB888 /* tab_listen_selected@3x.png */; };
+		27A927ED1F6B7AB500AEB888 /* tab_word_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927E11F6B7AB500AEB888 /* tab_word_normal@2x.png */; };
+		27A927EE1F6B7AB500AEB888 /* tab_word_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927E21F6B7AB500AEB888 /* tab_word_normal@3x.png */; };
+		27A927EF1F6B7AB500AEB888 /* tab_word_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927E31F6B7AB500AEB888 /* tab_word_selected@2x.png */; };
+		27A927F01F6B7AB500AEB888 /* tab_word_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927E41F6B7AB500AEB888 /* tab_word_selected@3x.png */; };
+		27A927F51F6B7AD000AEB888 /* profile_tab_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927F11F6B7AD000AEB888 /* profile_tab_selected@3x.png */; };
+		27A927F61F6B7AD000AEB888 /* profile_tab_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927F21F6B7AD000AEB888 /* profile_tab_selected@2x.png */; };
+		27A927F71F6B7AD000AEB888 /* profile_tab_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927F31F6B7AD000AEB888 /* profile_tab_normal@3x.png */; };
+		27A927F81F6B7AD000AEB888 /* profile_tab_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A927F41F6B7AD000AEB888 /* profile_tab_normal@2x.png */; };
+		27A927FA1F6B7B5D00AEB888 /* toefl_word_l.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 27A927F91F6B7B5D00AEB888 /* toefl_word_l.sqlite */; };
+		27A927FD1F6B7B7200AEB888 /* DBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A927FC1F6B7B7200AEB888 /* DBClient.m */; };
+		27A927FF1F6BAC3100AEB888 /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A927FE1F6BAC3100AEB888 /* WordViewController.xib */; };
+		27A928031F6BAED100AEB888 /* WordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A928011F6BAED100AEB888 /* WordCell.m */; };
+		27A928041F6BAED100AEB888 /* WordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A928021F6BAED100AEB888 /* WordCell.xib */; };
+		27A928141F6BD99B00AEB888 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A928121F6BD99B00AEB888 /* WordListViewController.m */; };
+		27A928151F6BD99B00AEB888 /* WordListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A928131F6BD99B00AEB888 /* WordListViewController.xib */; };
+		27A928191F6BDA3100AEB888 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A928171F6BDA3100AEB888 /* CardCell.m */; };
+		27A9281A1F6BDA3100AEB888 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A928181F6BDA3100AEB888 /* CardCell.xib */; };
+		27A9281E1F6BDF2400AEB888 /* WordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A9281C1F6BDF2400AEB888 /* WordDetailViewController.m */; };
+		27A9281F1F6BDF2400AEB888 /* WordDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27A9281D1F6BDF2400AEB888 /* WordDetailViewController.xib */; };
 		27E6AE091F6A3357003EC180 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E6AE081F6A3357003EC180 /* main.m */; };
 		27E6AE0C1F6A3358003EC180 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E6AE0B1F6A3358003EC180 /* AppDelegate.m */; };
-		27E6AE0F1F6A3358003EC180 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E6AE0E1F6A3358003EC180 /* ViewController.m */; };
-		27E6AE121F6A3358003EC180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E6AE101F6A3358003EC180 /* Main.storyboard */; };
 		27E6AE141F6A3358003EC180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E6AE131F6A3358003EC180 /* Assets.xcassets */; };
 		27E6AE171F6A3359003EC180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E6AE151F6A3359003EC180 /* LaunchScreen.storyboard */; };
 		9477C07CE6300645231C0F91 /* libPods-toefl_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3007114AB8AB17F4A6CF1D85 /* libPods-toefl_ios.a */; };
@@ -18,13 +62,79 @@
 
 /* Begin PBXFileReference section */
 		1FAD62863675160A356ECC82 /* Pods-toefl_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-toefl_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-toefl_ios/Pods-toefl_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		27A927941F6B603200AEB888 /* CommomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommomTableViewController.h; sourceTree = "<group>"; };
+		27A927951F6B603200AEB888 /* CommomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommomTableViewController.m; sourceTree = "<group>"; };
+		27A927961F6B603200AEB888 /* CommonNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonNavigationViewController.h; sourceTree = "<group>"; };
+		27A927971F6B603200AEB888 /* CommonNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonNavigationViewController.m; sourceTree = "<group>"; };
+		27A927981F6B603200AEB888 /* CommonTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTabbarViewController.h; sourceTree = "<group>"; };
+		27A927991F6B603200AEB888 /* CommonTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTabbarViewController.m; sourceTree = "<group>"; };
+		27A9279A1F6B603200AEB888 /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		27A9279B1F6B603200AEB888 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		27A9279C1F6B603200AEB888 /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
+		27A9279D1F6B603200AEB888 /* TabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarViewController.m; sourceTree = "<group>"; };
+		27A927A01F6B603200AEB888 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
+		27A927A11F6B603200AEB888 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		27A927A21F6B603200AEB888 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		27A927A31F6B603200AEB888 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		27A927A41F6B603200AEB888 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
+		27A927A51F6B603200AEB888 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
+		27A927A61F6B603200AEB888 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		27A927A71F6B603200AEB888 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		27A927A81F6B603200AEB888 /* CustomSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegment.h; sourceTree = "<group>"; };
+		27A927A91F6B603200AEB888 /* CustomSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegment.m; sourceTree = "<group>"; };
+		27A927AE1F6B603200AEB888 /* SegmentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentLabel.h; sourceTree = "<group>"; };
+		27A927AF1F6B603200AEB888 /* SegmentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentLabel.m; sourceTree = "<group>"; };
+		27A927B01F6B603200AEB888 /* TabbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarItem.h; sourceTree = "<group>"; };
+		27A927B11F6B603200AEB888 /* TabbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarItem.m; sourceTree = "<group>"; };
+		27A927B21F6B603200AEB888 /* TabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarView.h; sourceTree = "<group>"; };
+		27A927B31F6B603200AEB888 /* TabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarView.m; sourceTree = "<group>"; };
+		27A927C31F6B615D00AEB888 /* WordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordViewController.h; path = WordView/WordViewController.h; sourceTree = "<group>"; };
+		27A927C41F6B615D00AEB888 /* WordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordViewController.m; path = WordView/WordViewController.m; sourceTree = "<group>"; };
+		27A927C71F6B618000AEB888 /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListenViewController.h; path = ListenView/ListenViewController.h; sourceTree = "<group>"; };
+		27A927C81F6B618000AEB888 /* ListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListenViewController.m; path = ListenView/ListenViewController.m; sourceTree = "<group>"; };
+		27A927CB1F6B619700AEB888 /* CompositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CompositionViewController.h; path = CompositionView/CompositionViewController.h; sourceTree = "<group>"; };
+		27A927CC1F6B619700AEB888 /* CompositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CompositionViewController.m; path = CompositionView/CompositionViewController.m; sourceTree = "<group>"; };
+		27A927CF1F6B61BF00AEB888 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ProfileView/ProfileViewController.h; sourceTree = "<group>"; };
+		27A927D01F6B61BF00AEB888 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ProfileView/ProfileViewController.m; sourceTree = "<group>"; };
+		27A927D11F6B61BF00AEB888 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileViewController.xib; path = ProfileView/ProfileViewController.xib; sourceTree = "<group>"; };
+		27A927D51F6B796800AEB888 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Word.h; path = Model/Word.h; sourceTree = "<group>"; };
+		27A927D61F6B796800AEB888 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Word.m; path = Model/Word.m; sourceTree = "<group>"; };
+		27A927D91F6B7AB500AEB888 /* tab_composition_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_composition_normal@2x.png"; sourceTree = "<group>"; };
+		27A927DA1F6B7AB500AEB888 /* tab_composition_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_composition_normal@3x.png"; sourceTree = "<group>"; };
+		27A927DB1F6B7AB500AEB888 /* tab_composition_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_composition_selected@2x.png"; sourceTree = "<group>"; };
+		27A927DC1F6B7AB500AEB888 /* tab_composition_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_composition_selected@3x.png"; sourceTree = "<group>"; };
+		27A927DD1F6B7AB500AEB888 /* tab_listen_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_listen_normal@2x.png"; sourceTree = "<group>"; };
+		27A927DE1F6B7AB500AEB888 /* tab_listen_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_listen_normal@3x.png"; sourceTree = "<group>"; };
+		27A927DF1F6B7AB500AEB888 /* tab_listen_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_listen_selected@2x.png"; sourceTree = "<group>"; };
+		27A927E01F6B7AB500AEB888 /* tab_listen_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_listen_selected@3x.png"; sourceTree = "<group>"; };
+		27A927E11F6B7AB500AEB888 /* tab_word_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_word_normal@2x.png"; sourceTree = "<group>"; };
+		27A927E21F6B7AB500AEB888 /* tab_word_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_word_normal@3x.png"; sourceTree = "<group>"; };
+		27A927E31F6B7AB500AEB888 /* tab_word_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_word_selected@2x.png"; sourceTree = "<group>"; };
+		27A927E41F6B7AB500AEB888 /* tab_word_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_word_selected@3x.png"; sourceTree = "<group>"; };
+		27A927F11F6B7AD000AEB888 /* profile_tab_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_tab_selected@3x.png"; sourceTree = "<group>"; };
+		27A927F21F6B7AD000AEB888 /* profile_tab_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_tab_selected@2x.png"; sourceTree = "<group>"; };
+		27A927F31F6B7AD000AEB888 /* profile_tab_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_tab_normal@3x.png"; sourceTree = "<group>"; };
+		27A927F41F6B7AD000AEB888 /* profile_tab_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile_tab_normal@2x.png"; sourceTree = "<group>"; };
+		27A927F91F6B7B5D00AEB888 /* toefl_word_l.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = toefl_word_l.sqlite; sourceTree = "<group>"; };
+		27A927FB1F6B7B7200AEB888 /* DBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBClient.h; path = Model/DBClient.h; sourceTree = "<group>"; };
+		27A927FC1F6B7B7200AEB888 /* DBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBClient.m; path = Model/DBClient.m; sourceTree = "<group>"; };
+		27A927FE1F6BAC3100AEB888 /* WordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WordViewController.xib; path = WordView/WordViewController.xib; sourceTree = "<group>"; };
+		27A928001F6BAED100AEB888 /* WordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCell.h; path = WordView/WordCell.h; sourceTree = "<group>"; };
+		27A928011F6BAED100AEB888 /* WordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCell.m; path = WordView/WordCell.m; sourceTree = "<group>"; };
+		27A928021F6BAED100AEB888 /* WordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WordCell.xib; path = WordView/WordCell.xib; sourceTree = "<group>"; };
+		27A928111F6BD99B00AEB888 /* WordListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordListViewController.h; path = WordView/WordListViewController.h; sourceTree = "<group>"; };
+		27A928121F6BD99B00AEB888 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordListViewController.m; path = WordView/WordListViewController.m; sourceTree = "<group>"; };
+		27A928131F6BD99B00AEB888 /* WordListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WordListViewController.xib; path = WordView/WordListViewController.xib; sourceTree = "<group>"; };
+		27A928161F6BDA3100AEB888 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardCell.h; path = WordView/CardCell.h; sourceTree = "<group>"; };
+		27A928171F6BDA3100AEB888 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardCell.m; path = WordView/CardCell.m; sourceTree = "<group>"; };
+		27A928181F6BDA3100AEB888 /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardCell.xib; path = WordView/CardCell.xib; sourceTree = "<group>"; };
+		27A9281B1F6BDF2400AEB888 /* WordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordDetailViewController.h; path = WordView/WordDetailViewController.h; sourceTree = "<group>"; };
+		27A9281C1F6BDF2400AEB888 /* WordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordDetailViewController.m; path = WordView/WordDetailViewController.m; sourceTree = "<group>"; };
+		27A9281D1F6BDF2400AEB888 /* WordDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WordDetailViewController.xib; path = WordView/WordDetailViewController.xib; sourceTree = "<group>"; };
 		27E6AE041F6A3357003EC180 /* toefl_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toefl_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E6AE081F6A3357003EC180 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27E6AE0A1F6A3357003EC180 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		27E6AE0B1F6A3358003EC180 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		27E6AE0D1F6A3358003EC180 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		27E6AE0E1F6A3358003EC180 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		27E6AE111F6A3358003EC180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27E6AE131F6A3358003EC180 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27E6AE161F6A3359003EC180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27E6AE181F6A3359003EC180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +154,139 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27A927921F6B5F1600AEB888 /* WordView */ = {
+			isa = PBXGroup;
+			children = (
+				27A927C31F6B615D00AEB888 /* WordViewController.h */,
+				27A927C41F6B615D00AEB888 /* WordViewController.m */,
+				27A927FE1F6BAC3100AEB888 /* WordViewController.xib */,
+				27A928001F6BAED100AEB888 /* WordCell.h */,
+				27A928011F6BAED100AEB888 /* WordCell.m */,
+				27A928021F6BAED100AEB888 /* WordCell.xib */,
+				27A928111F6BD99B00AEB888 /* WordListViewController.h */,
+				27A928121F6BD99B00AEB888 /* WordListViewController.m */,
+				27A928131F6BD99B00AEB888 /* WordListViewController.xib */,
+				27A928161F6BDA3100AEB888 /* CardCell.h */,
+				27A928171F6BDA3100AEB888 /* CardCell.m */,
+				27A928181F6BDA3100AEB888 /* CardCell.xib */,
+				27A9281B1F6BDF2400AEB888 /* WordDetailViewController.h */,
+				27A9281C1F6BDF2400AEB888 /* WordDetailViewController.m */,
+				27A9281D1F6BDF2400AEB888 /* WordDetailViewController.xib */,
+			);
+			name = WordView;
+			sourceTree = "<group>";
+		};
+		27A927931F6B603200AEB888 /* share */ = {
+			isa = PBXGroup;
+			children = (
+				27A927941F6B603200AEB888 /* CommomTableViewController.h */,
+				27A927951F6B603200AEB888 /* CommomTableViewController.m */,
+				27A927961F6B603200AEB888 /* CommonNavigationViewController.h */,
+				27A927971F6B603200AEB888 /* CommonNavigationViewController.m */,
+				27A927981F6B603200AEB888 /* CommonTabbarViewController.h */,
+				27A927991F6B603200AEB888 /* CommonTabbarViewController.m */,
+				27A9279A1F6B603200AEB888 /* CommonViewController.h */,
+				27A9279B1F6B603200AEB888 /* CommonViewController.m */,
+				27A9279C1F6B603200AEB888 /* TabbarViewController.h */,
+				27A9279D1F6B603200AEB888 /* TabbarViewController.m */,
+			);
+			path = share;
+			sourceTree = "<group>";
+		};
+		27A9279E1F6B603200AEB888 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				27A9279F1F6B603200AEB888 /* category */,
+				27A927A61F6B603200AEB888 /* CustomButton.h */,
+				27A927A71F6B603200AEB888 /* CustomButton.m */,
+				27A927A81F6B603200AEB888 /* CustomSegment.h */,
+				27A927A91F6B603200AEB888 /* CustomSegment.m */,
+				27A927AE1F6B603200AEB888 /* SegmentLabel.h */,
+				27A927AF1F6B603200AEB888 /* SegmentLabel.m */,
+				27A927B01F6B603200AEB888 /* TabbarItem.h */,
+				27A927B11F6B603200AEB888 /* TabbarItem.m */,
+				27A927B21F6B603200AEB888 /* TabbarView.h */,
+				27A927B31F6B603200AEB888 /* TabbarView.m */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		27A9279F1F6B603200AEB888 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				27A927A01F6B603200AEB888 /* NSString+Utils.h */,
+				27A927A11F6B603200AEB888 /* NSString+Utils.m */,
+				27A927A21F6B603200AEB888 /* UIView+Utils.h */,
+				27A927A31F6B603200AEB888 /* UIView+Utils.m */,
+				27A927A41F6B603200AEB888 /* UIViewController+Utils.h */,
+				27A927A51F6B603200AEB888 /* UIViewController+Utils.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		27A927C61F6B616000AEB888 /* ListenView */ = {
+			isa = PBXGroup;
+			children = (
+				27A927C71F6B618000AEB888 /* ListenViewController.h */,
+				27A927C81F6B618000AEB888 /* ListenViewController.m */,
+			);
+			name = ListenView;
+			sourceTree = "<group>";
+		};
+		27A927CA1F6B618200AEB888 /* CompositionView */ = {
+			isa = PBXGroup;
+			children = (
+				27A927CB1F6B619700AEB888 /* CompositionViewController.h */,
+				27A927CC1F6B619700AEB888 /* CompositionViewController.m */,
+			);
+			name = CompositionView;
+			sourceTree = "<group>";
+		};
+		27A927CE1F6B61A900AEB888 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				27A927CF1F6B61BF00AEB888 /* ProfileViewController.h */,
+				27A927D01F6B61BF00AEB888 /* ProfileViewController.m */,
+				27A927D11F6B61BF00AEB888 /* ProfileViewController.xib */,
+			);
+			name = ProfileView;
+			sourceTree = "<group>";
+		};
+		27A927D41F6B795600AEB888 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27A927F91F6B7B5D00AEB888 /* toefl_word_l.sqlite */,
+				27A927D51F6B796800AEB888 /* Word.h */,
+				27A927D61F6B796800AEB888 /* Word.m */,
+				27A927FB1F6B7B7200AEB888 /* DBClient.h */,
+				27A927FC1F6B7B7200AEB888 /* DBClient.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		27A927D81F6B7AB500AEB888 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				27A927F11F6B7AD000AEB888 /* profile_tab_selected@3x.png */,
+				27A927F21F6B7AD000AEB888 /* profile_tab_selected@2x.png */,
+				27A927F31F6B7AD000AEB888 /* profile_tab_normal@3x.png */,
+				27A927F41F6B7AD000AEB888 /* profile_tab_normal@2x.png */,
+				27A927D91F6B7AB500AEB888 /* tab_composition_normal@2x.png */,
+				27A927DA1F6B7AB500AEB888 /* tab_composition_normal@3x.png */,
+				27A927DB1F6B7AB500AEB888 /* tab_composition_selected@2x.png */,
+				27A927DC1F6B7AB500AEB888 /* tab_composition_selected@3x.png */,
+				27A927DD1F6B7AB500AEB888 /* tab_listen_normal@2x.png */,
+				27A927DE1F6B7AB500AEB888 /* tab_listen_normal@3x.png */,
+				27A927DF1F6B7AB500AEB888 /* tab_listen_selected@2x.png */,
+				27A927E01F6B7AB500AEB888 /* tab_listen_selected@3x.png */,
+				27A927E11F6B7AB500AEB888 /* tab_word_normal@2x.png */,
+				27A927E21F6B7AB500AEB888 /* tab_word_normal@3x.png */,
+				27A927E31F6B7AB500AEB888 /* tab_word_selected@2x.png */,
+				27A927E41F6B7AB500AEB888 /* tab_word_selected@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		27E6ADFB1F6A3357003EC180 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +308,16 @@
 		27E6AE061F6A3357003EC180 /* toefl_ios */ = {
 			isa = PBXGroup;
 			children = (
+				27A927D81F6B7AB500AEB888 /* Images */,
+				27A927D41F6B795600AEB888 /* Model */,
+				27A927CE1F6B61A900AEB888 /* ProfileView */,
+				27A927CA1F6B618200AEB888 /* CompositionView */,
+				27A927C61F6B616000AEB888 /* ListenView */,
+				27A927931F6B603200AEB888 /* share */,
+				27A9279E1F6B603200AEB888 /* Dependencies */,
+				27A927921F6B5F1600AEB888 /* WordView */,
 				27E6AE0A1F6A3357003EC180 /* AppDelegate.h */,
 				27E6AE0B1F6A3358003EC180 /* AppDelegate.m */,
-				27E6AE0D1F6A3358003EC180 /* ViewController.h */,
-				27E6AE0E1F6A3358003EC180 /* ViewController.m */,
-				27E6AE101F6A3358003EC180 /* Main.storyboard */,
 				27E6AE131F6A3358003EC180 /* Assets.xcassets */,
 				27E6AE151F6A3359003EC180 /* LaunchScreen.storyboard */,
 				27E6AE181F6A3359003EC180 /* Info.plist */,
@@ -165,9 +413,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A927F01F6B7AB500AEB888 /* tab_word_selected@3x.png in Resources */,
+				27A927F61F6B7AD000AEB888 /* profile_tab_selected@2x.png in Resources */,
+				27A927F81F6B7AD000AEB888 /* profile_tab_normal@2x.png in Resources */,
+				27A927FF1F6BAC3100AEB888 /* WordViewController.xib in Resources */,
+				27A927EA1F6B7AB500AEB888 /* tab_listen_normal@3x.png in Resources */,
+				27A927E51F6B7AB500AEB888 /* tab_composition_normal@2x.png in Resources */,
+				27A927EB1F6B7AB500AEB888 /* tab_listen_selected@2x.png in Resources */,
+				27A9281A1F6BDA3100AEB888 /* CardCell.xib in Resources */,
+				27A927D31F6B61BF00AEB888 /* ProfileViewController.xib in Resources */,
+				27A927FA1F6B7B5D00AEB888 /* toefl_word_l.sqlite in Resources */,
+				27A928151F6BD99B00AEB888 /* WordListViewController.xib in Resources */,
+				27A927EC1F6B7AB500AEB888 /* tab_listen_selected@3x.png in Resources */,
+				27A927ED1F6B7AB500AEB888 /* tab_word_normal@2x.png in Resources */,
+				27A927F71F6B7AD000AEB888 /* profile_tab_normal@3x.png in Resources */,
+				27A927E91F6B7AB500AEB888 /* tab_listen_normal@2x.png in Resources */,
+				27A927F51F6B7AD000AEB888 /* profile_tab_selected@3x.png in Resources */,
+				27A927E71F6B7AB500AEB888 /* tab_composition_selected@2x.png in Resources */,
+				27A927E81F6B7AB500AEB888 /* tab_composition_selected@3x.png in Resources */,
 				27E6AE171F6A3359003EC180 /* LaunchScreen.storyboard in Resources */,
 				27E6AE141F6A3358003EC180 /* Assets.xcassets in Resources */,
-				27E6AE121F6A3358003EC180 /* Main.storyboard in Resources */,
+				27A927EF1F6B7AB500AEB888 /* tab_word_selected@2x.png in Resources */,
+				27A928041F6BAED100AEB888 /* WordCell.xib in Resources */,
+				27A927EE1F6B7AB500AEB888 /* tab_word_normal@3x.png in Resources */,
+				27A9281F1F6BDF2400AEB888 /* WordDetailViewController.xib in Resources */,
+				27A927E61F6B7AB500AEB888 /* tab_composition_normal@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,23 +502,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E6AE0F1F6A3358003EC180 /* ViewController.m in Sources */,
+				27A927FD1F6B7B7200AEB888 /* DBClient.m in Sources */,
+				27A927B41F6B603200AEB888 /* CommomTableViewController.m in Sources */,
+				27A927C91F6B618000AEB888 /* ListenViewController.m in Sources */,
 				27E6AE0C1F6A3358003EC180 /* AppDelegate.m in Sources */,
+				27A927D21F6B61BF00AEB888 /* ProfileViewController.m in Sources */,
+				27A928031F6BAED100AEB888 /* WordCell.m in Sources */,
+				27A927C11F6B603200AEB888 /* TabbarItem.m in Sources */,
+				27A927D71F6B796800AEB888 /* Word.m in Sources */,
+				27A927B51F6B603200AEB888 /* CommonNavigationViewController.m in Sources */,
+				27A927C01F6B603200AEB888 /* SegmentLabel.m in Sources */,
+				27A927BA1F6B603200AEB888 /* UIView+Utils.m in Sources */,
+				27A927CD1F6B619700AEB888 /* CompositionViewController.m in Sources */,
+				27A9281E1F6BDF2400AEB888 /* WordDetailViewController.m in Sources */,
+				27A927C21F6B603200AEB888 /* TabbarView.m in Sources */,
+				27A927BC1F6B603200AEB888 /* CustomButton.m in Sources */,
+				27A927B61F6B603200AEB888 /* CommonTabbarViewController.m in Sources */,
+				27A928191F6BDA3100AEB888 /* CardCell.m in Sources */,
+				27A927B81F6B603200AEB888 /* TabbarViewController.m in Sources */,
+				27A927C51F6B615D00AEB888 /* WordViewController.m in Sources */,
+				27A928141F6BD99B00AEB888 /* WordListViewController.m in Sources */,
 				27E6AE091F6A3357003EC180 /* main.m in Sources */,
+				27A927BD1F6B603200AEB888 /* CustomSegment.m in Sources */,
+				27A927B71F6B603200AEB888 /* CommonViewController.m in Sources */,
+				27A927BB1F6B603200AEB888 /* UIViewController+Utils.m in Sources */,
+				27A927B91F6B603200AEB888 /* NSString+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		27E6AE101F6A3358003EC180 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27E6AE111F6A3358003EC180 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		27E6AE151F6A3359003EC180 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -395,6 +679,7 @@
 				27E6AE1D1F6A3359003EC180 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
