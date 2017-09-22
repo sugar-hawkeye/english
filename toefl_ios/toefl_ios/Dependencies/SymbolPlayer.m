@@ -39,7 +39,7 @@
 
 
 - (void)setPlayPath:(NSString *)path {
-    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:path withExtension:@"mp3"];
 }
 
 @end
