@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,20 +15,23 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIU-mT-mHE">
                         <rect key="frame" x="10" y="10" width="300" height="79.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第一关" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8m-VR-dlf">
-                                <rect key="frame" x="13" y="13" width="55.5" height="21.5"/>
+                                <rect key="frame" x="10" y="10" width="55.5" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21.5" id="M0C-wn-our"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTS-YR-Y3x">
-                                <rect key="frame" x="78.5" y="15.5" width="37.5" height="17"/>
+                                <rect key="frame" x="75.5" y="12.5" width="37.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -37,18 +39,18 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="a8m-VR-dlf" firstAttribute="leading" secondItem="XIU-mT-mHE" secondAttribute="leadingMargin" constant="5" id="Iou-9I-5mi"/>
-                            <constraint firstItem="sTS-YR-Y3x" firstAttribute="centerY" secondItem="a8m-VR-dlf" secondAttribute="centerY" id="ZZ6-mx-Q1U"/>
-                            <constraint firstItem="a8m-VR-dlf" firstAttribute="top" secondItem="XIU-mT-mHE" secondAttribute="topMargin" constant="5" id="ieE-Hl-JG3"/>
-                            <constraint firstItem="sTS-YR-Y3x" firstAttribute="leading" secondItem="a8m-VR-dlf" secondAttribute="trailing" constant="10" id="sdN-6t-xKY"/>
+                            <constraint firstItem="sTS-YR-Y3x" firstAttribute="leading" secondItem="a8m-VR-dlf" secondAttribute="trailing" constant="10" id="CAp-mr-2nL"/>
+                            <constraint firstItem="a8m-VR-dlf" firstAttribute="leading" secondItem="XIU-mT-mHE" secondAttribute="leading" constant="10" id="VkH-qP-8yf"/>
+                            <constraint firstItem="a8m-VR-dlf" firstAttribute="top" secondItem="XIU-mT-mHE" secondAttribute="top" constant="10" id="Vs7-7O-kEl"/>
+                            <constraint firstItem="sTS-YR-Y3x" firstAttribute="centerY" secondItem="a8m-VR-dlf" secondAttribute="centerY" id="y3K-Q5-f2m"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="XIU-mT-mHE" secondAttribute="bottom" id="Atu-3G-cxC"/>
-                    <constraint firstItem="XIU-mT-mHE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Dbg-aG-DXO"/>
-                    <constraint firstAttribute="trailing" secondItem="XIU-mT-mHE" secondAttribute="trailing" constant="10" id="NaP-9i-Dti"/>
-                    <constraint firstItem="XIU-mT-mHE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pKy-8f-Etg"/>
+                    <constraint firstAttribute="bottom" secondItem="XIU-mT-mHE" secondAttribute="bottom" id="FWL-Qs-zlq"/>
+                    <constraint firstItem="XIU-mT-mHE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JJT-ri-2ZM"/>
+                    <constraint firstAttribute="trailing" secondItem="XIU-mT-mHE" secondAttribute="trailing" constant="10" id="T44-6L-AvO"/>
+                    <constraint firstItem="XIU-mT-mHE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="k3l-gJ-W55"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

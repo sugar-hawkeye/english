@@ -27,11 +27,16 @@
     
     CommonTabbarViewController *commonTabbarViewController = [CommonTabbarViewController singleton];
     self.window.rootViewController = commonTabbarViewController;
-    
-
+  
     
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)subString {
+    NSString *str = @"i want to see it.我是二十多岁";
+    NSString *regexStr = @"^[A-za-z]$";
+    NSRange range = [str rangeOfString:regexStr];
 }
 
 

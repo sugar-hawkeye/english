@@ -15,4 +15,6 @@ static const NSInteger limit = 100;
 - (NSMutableArray *)getDataAtPage:(NSString *)page;
 - (NSInteger)getCount:(NSString *)tableName;
 
+- (NSMutableArray *)getDataFromComposition;
+
 @end

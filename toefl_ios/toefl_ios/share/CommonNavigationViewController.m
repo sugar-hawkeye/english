@@ -10,6 +10,8 @@
 
 @interface CommonNavigationViewController ()
 
+@property (nonatomic, strong) UIImage *backImage;
+
 @end
 
 @implementation CommonNavigationViewController
@@ -18,6 +20,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.translucent = NO;
     
+    _backImage = [UIImage imageNamed:@"nav_back_btn.png"];
 }
 
 - (void)setLeftButton:(UIImage*)image target:(id)target action:(SEL)action {
@@ -58,7 +61,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (self.navigationController.viewControllers.count > 1) {
-        [self setLeftButton:nil target:self action:@selector(popViewController)];
+        [self setLeftButton:_backImage target:self action:@selector(popViewController)];
     }
     
 }

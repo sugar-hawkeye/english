@@ -12,9 +12,6 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -28,13 +25,9 @@
 }
 
 - (void)layoutSubviews {
-    //    [_containerView setLayerWithCorner:10];
+    [super layoutSubviews];
+//    NSLog(@"%@",NSStringFromCGRect(_containerView.frame));
     
-    
-}
-
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:_containerView.bounds cornerRadius:10];
     CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
     shapeLayer.path = bezierPath.CGPath;
@@ -42,6 +35,15 @@
     _containerView.layer.mask = shapeLayer;
 }
 
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    
+}
+
+- (void)didMoveToSuperview {
+    [super didMoveToSuperview];
+    
+}
 
 
 @end

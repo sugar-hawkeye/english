@@ -8,11 +8,13 @@
 
 #import "WordCell.h"
 
-
+#import "NSString+Utils.h"
 
 @implementation WordCell
 
-
+- (void)setMean:(NSString*)mean {
+    _meanLabel.text = [mean split:@"[a-z]{1,5}\\." flag:@"\n"];
+}
 
 
 @end

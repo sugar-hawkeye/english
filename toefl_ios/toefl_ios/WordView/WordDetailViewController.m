@@ -10,6 +10,8 @@
 
 #import "Word.h"
 
+#import "CustomTextView.h"
+
 @interface WordDetailViewController ()
 
 @property (nonatomic, strong) Word *word;
@@ -28,9 +30,8 @@
     _nameLabel.text = _word.name;
     _symbolLabel.text = _word.symbol;
     _meanLabel.text = _word.mean;
-    _exampleLabel.text = _word.example;
-    _exampleLabel.numberOfLines = 0;
-    [_exampleLabel sizeToFit];
+    [_customTextView setContent:_word.example flag:_word.name];
+    
 }
 
 - (void)setWord:(Word *)word {

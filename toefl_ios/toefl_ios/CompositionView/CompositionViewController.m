@@ -8,7 +8,16 @@
 
 #import "CompositionViewController.h"
 
-@interface CompositionViewController ()
+#import "NSString+Utils.h"
+#import "DBClient.h"
+
+#import "Composition.h"
+#import "CompositionCell.h"
+
+@interface CompositionViewController ()<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) DBClient *dbClient;
+@property (nonatomic, strong) NSMutableArray *datas;
 
 @end
 
@@ -16,22 +25,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _dbClient = [[DBClient alloc] init];
+    _datas = [_dbClient getDataFromComposition];
+    
+    UINib *nibCell = [UINib nibWithNibName:@"CompositionCell" bundle:nil];
+    [_tableView registerNib:nibCell forCellReuseIdentifier:@"CompositionCell"];
+    _tableView.scrollsToTop = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 30;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CompositionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CompositionCell"];
+    Composition *composition = [_datas objectAtIndex:indexPath.row];
+    [cell setContent:composition.title];
+    return cell;
 }
-*/
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Composition *composition = [_datas objectAtIndex:indexPath.row];
+    
+    CompositionCell *cell=(CompositionCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    CGSize size = CGSizeMake(cell.titleLabel.frame.size.width, MAXFLOAT);
+    CGFloat height = [composition.title sizeWithFont:cell.titleLabel.font maxSize:size].height + 20;
+    
+    
+    return height;
+}
 
 @end

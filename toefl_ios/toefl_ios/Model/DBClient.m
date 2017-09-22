@@ -8,7 +8,9 @@
 
 #import "DBClient.h"
 #import "FMDB.h"
+
 #import "Word.h"
+#import "Composition.h"
 
 @interface DBClient () {
     
@@ -50,6 +52,28 @@
         }
         [rs close];
     }];
+    [_queue close];
+    return data;
+}
+
+- (NSMutableArray *)getDataFromComposition {
+    NSMutableArray *data = [[NSMutableArray alloc] init];
+    
+    NSString *sql = [NSString stringWithFormat:@"select * from composition"];
+    [_queue inDatabase:^(FMDatabase * _Nonnull db) {
+        FMResultSet *rs = [db executeQuery:sql];
+        while ([rs next]) {
+            Composition *composition = [[Composition alloc] init];
+            composition.titleID = [rs intForColumn:@"titleID"];
+            composition.title = [rs stringForColumn:@"title"];
+            composition.require = [rs stringForColumn:@"require"];
+            composition.custom = [rs stringForColumn:@"custom"];
+            composition.example = [rs stringForColumn:@"example"];
+            [data addObject:composition];
+        }
+        [rs close];
+    }];
+    [_queue close];
     return data;
 }
 
@@ -67,7 +91,7 @@
         }
         [rs close];
     }];
-
+    [_queue close];
     return count;
 }
 - (NSString *)getDBPath {

@@ -8,7 +8,13 @@
 
 #import "ListenViewController.h"
 
-@interface ListenViewController ()
+#import "PageScrollView.h"
+
+
+@interface ListenViewController ()<PageScrollViewDatasource>
+
+
+@property (nonatomic, strong) PageScrollView *pageScrollView;
 
 @end
 
@@ -16,22 +22,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _pageScrollView = [[PageScrollView alloc] initWithFrame:self.view.bounds];
+    _pageScrollView.pageDataSource = self;
+    [_pageScrollView setPageOrientation:PageOrientationVertical];
+    
+    [self.view addSubview:_pageScrollView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLayoutSubviews {
+    [super viewWillLayoutSubviews];
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfRow:(PageScrollView*)pageScrollView {
+    return 5;
 }
-*/
+
+- (CGFloat)pageScrollView:(PageScrollView*)pageScrollView heightForRowAtIndex:(NSInteger)index {
+    
+    return 200;
+}
+
+- (CGFloat)pageScrollView:(PageScrollView*)pageScrollView widthForRowAtIndex:(NSInteger)index {
+    return self.view.frame.size.width;
+}
+
+
+- (PageView *)pageScrollView:(PageScrollView*)pageScrollView cellForRowAtIndex:(NSInteger)row {
+    PageView *view = [pageScrollView dequeueReusableCell];
+    view.layer.borderColor = [UIColor redColor].CGColor;
+    view.layer.borderWidth = 2;
+    view.textLabel.text = [NSString stringWithFormat:@"%ld",row];
+    return view;
+}
+
+
 
 @end

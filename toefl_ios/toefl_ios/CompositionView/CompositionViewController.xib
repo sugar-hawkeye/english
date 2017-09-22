@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompositionViewController">
+            <connections>
+                <outlet property="tableView" destination="6Ri-4Q-TKI" id="ln0-4D-C1b"/>
+                <outlet property="view" destination="iN0-l3-epB" id="nTO-SX-iju"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Ri-4Q-TKI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ADR-uE-uqU"/>
+                        <outlet property="delegate" destination="-1" id="RTW-lv-at9"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="6Ri-4Q-TKI" secondAttribute="bottom" id="1Yu-Hk-hTp"/>
+                <constraint firstItem="6Ri-4Q-TKI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Vix-13-0Px"/>
+                <constraint firstItem="6Ri-4Q-TKI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hd8-cC-zbx"/>
+                <constraint firstAttribute="trailing" secondItem="6Ri-4Q-TKI" secondAttribute="trailing" id="wp2-Ae-OCb"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WordDetailViewController">
             <connections>
-                <outlet property="exampleLabel" destination="b1S-Q1-KOV" id="If3-63-NGN"/>
+                <outlet property="customTextView" destination="IJy-I2-kUf" id="5NH-6r-4ge"/>
                 <outlet property="headerView" destination="gEw-6J-DQS" id="e0E-t8-VuT"/>
                 <outlet property="meanLabel" destination="QOG-YP-cqj" id="BNy-Rc-0Yi"/>
                 <outlet property="nameLabel" destination="bYZ-Yx-54N" id="moF-11-GJg"/>
@@ -62,22 +62,25 @@
                         <constraint firstItem="bYZ-Yx-54N" firstAttribute="leading" secondItem="gEw-6J-DQS" secondAttribute="leading" constant="10" id="waK-jt-Cto"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1S-Q1-KOV">
-                    <rect key="frame" x="0.0" y="79.5" width="375" height="587.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IJy-I2-kUf" customClass="CustomTextView">
+                    <rect key="frame" x="5" y="79.5" width="370" height="587.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Ghi-3Q-IoD"/>
+                    </connections>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="b1S-Q1-KOV" firstAttribute="top" secondItem="gEw-6J-DQS" secondAttribute="bottom" id="2q8-xe-YJ1"/>
-                <constraint firstAttribute="bottom" secondItem="b1S-Q1-KOV" secondAttribute="bottom" id="6tN-5p-fVY"/>
+                <constraint firstItem="IJy-I2-kUf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="0QA-8i-y0a"/>
                 <constraint firstItem="gEw-6J-DQS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6ug-6B-Gts"/>
-                <constraint firstItem="b1S-Q1-KOV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CZM-fn-Hmc"/>
+                <constraint firstAttribute="trailing" secondItem="IJy-I2-kUf" secondAttribute="trailing" id="Rhr-le-Opj"/>
                 <constraint firstAttribute="trailing" secondItem="gEw-6J-DQS" secondAttribute="trailing" id="V8e-l3-obX"/>
-                <constraint firstAttribute="trailing" secondItem="b1S-Q1-KOV" secondAttribute="trailing" id="XeH-SG-Cyy"/>
                 <constraint firstItem="gEw-6J-DQS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bWN-b0-oWg"/>
+                <constraint firstAttribute="bottom" secondItem="IJy-I2-kUf" secondAttribute="bottom" id="kPS-qe-iTI"/>
+                <constraint firstItem="IJy-I2-kUf" firstAttribute="top" secondItem="gEw-6J-DQS" secondAttribute="bottom" id="kTn-XG-z40"/>
             </constraints>
         </view>
     </objects>

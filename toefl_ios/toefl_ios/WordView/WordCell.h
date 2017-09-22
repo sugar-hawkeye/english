@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SymbolButton.h"
+
 @interface WordCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *symbolLabel;
 @property (nonatomic, weak) IBOutlet UILabel *meanLabel;
+@property (nonatomic, weak) IBOutlet SymbolButton *audioButton;
 
+- (void)setMean:(NSString*)mean;
 
 @end

@@ -38,16 +38,17 @@
     
     UINib *nibCell = [UINib nibWithNibName:@"CardCell" bundle:nil];
     [_tableView registerNib:nibCell forCellReuseIdentifier:@"CardCell"];
+    _tableView.scrollsToTop = YES;
 }
 
-
-
+ 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _cardCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CardCell *cardCell = [tableView dequeueReusableCellWithIdentifier:@"CardCell"];
+    cardCell.tag = indexPath.row+1;
     cardCell.namLabel.text = [NSString stringWithFormat:@"第 %ld 关",indexPath.row + 1];
     if ((indexPath.row + 1) == _cardCount) {
         [cardCell setProgress:0 total:(_wordCount - indexPath.row*limit)];
@@ -55,6 +56,7 @@
     else{
         [cardCell setProgress:0 total:limit];
     }
+    
     return cardCell;
 }
 
@@ -66,16 +68,17 @@
     else{
         count = limit;
     }
+    self.wordListViewController = [[WordListViewController alloc] init];
     [self.wordListViewController setPage:indexPath.row + 1 count:count];
     [self.navigationController pushViewController:self.wordListViewController animated:YES];
 }
 
 
-- (WordListViewController *)wordListViewController {
-    if (!_wordListViewController) {
-        _wordListViewController = [[WordListViewController alloc] init];
-    }
-    return _wordListViewController;
-}
+//- (WordListViewController *)wordListViewController {
+//    if (!_wordListViewController) {
+//        _wordListViewController = [[WordListViewController alloc] init];
+//    }
+//    return _wordListViewController;
+//}
 
 @end

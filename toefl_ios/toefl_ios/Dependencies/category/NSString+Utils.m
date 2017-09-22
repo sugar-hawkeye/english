@@ -9,6 +9,7 @@
 #import "NSString+Utils.h"
 #import <UIKit/UIColor.h>
 
+
 @implementation NSString (Utils)
 
 - (UIColor *)colorWithHex
@@ -61,8 +62,52 @@
     else{
         time = [NSString stringWithFormat:@"%02d:%02d",(int)second / 60,(int)second % 60];
     }
-    
     return time;
 }
+
+- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize {
+    NSDictionary *attrs = @{NSFontAttributeName:font};
+    return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
+}
+
+//adj. 不受欢迎的 n. 冷淡
+//vt. 挣扎，痛苦地扭曲 vi. 扭曲，翻腾，受苦 n. 翻腾，苦恼
+//adj. 相反的，截然不同的 adv. 相反(地) n. 反面，相反
+
+- (NSString*)split:(NSString *)pattern flag:(NSString*)flag {
+    NSMutableString *string = [[NSMutableString alloc] initWithString:self];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
+    NSArray * matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+    
+    for (int i = 1; i < matches.count; i ++) {
+        NSTextCheckingResult *match = [matches objectAtIndex:i];
+        if ([[string substringWithRange:match.range] containsString:@" "]) {
+            [string insertString:flag atIndex:match.range.location+1];
+        }
+        else{
+            [string insertString:flag atIndex:match.range.location];
+        }
+        
+    }
+    
+    return string;
+}
+
+
+- (NSString *)slipChinese:(NSString*)content {
+    NSMutableString *string = [[NSMutableString alloc] initWithString:content];
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[a-z]\\.|[a-z]\\?|[a-z]\\!" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSArray * matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+    
+    for (int i = 0; i < matches.count; i ++) {
+        NSTextCheckingResult *match = [matches objectAtIndex:i];
+        [string insertString:@"\n" atIndex:match.range.location+match.range.length];
+        
+    }
+    return string;
+}
+
+
 
 @end

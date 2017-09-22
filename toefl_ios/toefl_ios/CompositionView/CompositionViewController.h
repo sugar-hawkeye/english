@@ -10,4 +10,7 @@
 
 @interface CompositionViewController : CommomTableViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
 @end
