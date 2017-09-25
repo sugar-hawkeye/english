@@ -53,9 +53,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WordCell *wordCell = [tableView dequeueReusableCellWithIdentifier:@"WordCell"];
     Word *word = (Word*)[_datas objectAtIndex:indexPath.row];
-    wordCell.nameLabel.text = word.name;
-    wordCell.symbolLabel.text = word.symbol;
-    [wordCell setMean:word.mean];
+    [wordCell setWord:word];
     return wordCell;
 }
 

@@ -9,7 +9,7 @@
 #import "SymbolPlayer.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface SymbolPlayer(){
+@interface SymbolPlayer()<AVAudioPlayerDelegate>{
     
 }
 
@@ -19,27 +19,39 @@
 
 @implementation SymbolPlayer
 
-+ (SymbolPlayer*)singleton {
-    static dispatch_once_t once;
-    static SymbolPlayer *client = nil;
-    dispatch_once(&once, ^ {
-        client = [[self alloc] init];
-    });
-    return client;
-}
-
-
-- (instancetype)init{
+- (instancetype)initWithName:(NSString *)name{
     self = [super init];
     if (self) {
-        _audioPlayer = [[AVAudioPlayer alloc] init];
+        NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"mp3"];
+        NSError *error = nil;
+        if (_audioPlayer) {
+            _audioPlayer = nil;
+        }
+        if (path.length > 0) {
+            _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:&error];
+            _audioPlayer.delegate = self;
+            _audioPlayer.numberOfLoops = 3;
+        }
+        
     }
     return self;
 }
 
+- (void)play {
+    if ([_audioPlayer prepareToPlay]) {
+        [_audioPlayer play];
+    }
+}
 
-- (void)setPlayPath:(NSString *)path {
-    NSURL *url = [[NSBundle mainBundle] URLForResource:path withExtension:@"mp3"];
+- (void)stop {
+    [_audioPlayer stop];
+    _audioPlayer = nil;
+}
+
+#pragma mark -- AVAudioPlayerDelegate
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    
 }
 
 @end

@@ -12,8 +12,9 @@
 
 @interface SymbolPlayer : NSObject
 
-+ (SymbolPlayer*)singleton;
+- (instancetype)initWithName:(NSString *)name;
 
-- (void)setPlayPath:(NSString *)path;
+- (void)play;
+- (void)stop;
 
 @end

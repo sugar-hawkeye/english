@@ -8,13 +8,18 @@
 
 #import "SymbolButton.h"
 
+#import "SymbolPlayer.h"
 
 
 @interface SymbolButton(){
     
 }
 
+@property (nonatomic, copy) NSString *name;
+
 @property (nonatomic, strong) UIImage *imgae;
+
+@property (nonatomic, strong) SymbolPlayer *symbolPlayer;
 
 
 @end
@@ -32,8 +37,16 @@
 
 }
 
+- (void)setPlayName:(NSString*)name {
+    _name = name;
+}
+
 - (void)playSymbol {
-    NSLog(@"play");
+    if (_symbolPlayer) {
+        _symbolPlayer = nil;
+    }
+    _symbolPlayer = [[SymbolPlayer alloc] initWithName:_name];
+    [_symbolPlayer play];
 }
 
 
