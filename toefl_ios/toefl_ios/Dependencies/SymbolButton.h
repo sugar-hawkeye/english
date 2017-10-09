@@ -10,6 +10,6 @@
 
 @interface SymbolButton : UIButton
 
-
+- (void)setPlayName:(NSString*)name;
 
 @end
