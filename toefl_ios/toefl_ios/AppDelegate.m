@@ -33,12 +33,6 @@
     return YES;
 }
 
-- (void)subString {
-    NSString *str = @"i want to see it.我是二十多岁";
-    NSString *regexStr = @"^[A-za-z]$";
-    NSRange range = [str rangeOfString:regexStr];
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

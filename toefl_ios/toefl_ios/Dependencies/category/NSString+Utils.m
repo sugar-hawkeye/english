@@ -87,9 +87,7 @@
         else{
             [string insertString:flag atIndex:match.range.location];
         }
-        
     }
-    
     return string;
 }
 

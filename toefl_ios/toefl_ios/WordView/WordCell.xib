@@ -19,44 +19,47 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-fu-T8G">
-                        <rect key="frame" x="10" y="10" width="300" height="79.5"/>
+                        <rect key="frame" x="10" y="10" width="300" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adasd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaL-ma-2eg">
-                                <rect key="frame" x="10" y="10" width="47" height="21.5"/>
+                                <rect key="frame" x="10" y="10" width="47" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21.5" id="67T-wd-cyS"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="adasdq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlQ-0H-MtU">
-                                <rect key="frame" x="50" y="36.5" width="48" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-rb-qjY">
+                                <rect key="frame" x="10" y="57" width="280" height="18"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="asdasda">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasda" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-rb-qjY">
-                                <rect key="frame" x="10" y="61.5" width="280" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfE-vE-LFf" customClass="SymbolButton">
-                                <rect key="frame" x="10" y="36.5" width="30" height="34"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3JE-d5-ZV9" customClass="SymbolButton">
+                                <rect key="frame" x="10" y="32" width="280" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="hiC-qS-ocR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="MfE-vE-LFf" firstAttribute="leading" secondItem="oaL-ma-2eg" secondAttribute="leading" id="0Uc-TC-zdK"/>
-                            <constraint firstAttribute="bottom" secondItem="W9B-rb-qjY" secondAttribute="bottom" id="4hS-iR-S0X"/>
+                            <constraint firstAttribute="bottom" secondItem="W9B-rb-qjY" secondAttribute="bottom" constant="5" id="4hS-iR-S0X"/>
                             <constraint firstItem="oaL-ma-2eg" firstAttribute="leading" secondItem="MQ3-fu-T8G" secondAttribute="leading" constant="10" id="8M1-iU-DcA"/>
+                            <constraint firstItem="3JE-d5-ZV9" firstAttribute="top" secondItem="oaL-ma-2eg" secondAttribute="bottom" id="E0s-XI-b9F"/>
+                            <constraint firstItem="3JE-d5-ZV9" firstAttribute="leading" secondItem="MQ3-fu-T8G" secondAttribute="leading" constant="10" id="GyE-UG-VAT"/>
                             <constraint firstItem="oaL-ma-2eg" firstAttribute="top" secondItem="MQ3-fu-T8G" secondAttribute="top" constant="10" id="Hga-sa-Kfv"/>
+                            <constraint firstItem="W9B-rb-qjY" firstAttribute="top" secondItem="3JE-d5-ZV9" secondAttribute="bottom" id="HnG-kt-wqf"/>
                             <constraint firstAttribute="trailing" secondItem="W9B-rb-qjY" secondAttribute="trailing" constant="10" id="Jfl-KA-POK"/>
-                            <constraint firstItem="MfE-vE-LFf" firstAttribute="top" secondItem="oaL-ma-2eg" secondAttribute="bottom" constant="5" id="e7P-Ed-pI2"/>
-                            <constraint firstItem="W9B-rb-qjY" firstAttribute="top" secondItem="KlQ-0H-MtU" secondAttribute="bottom" constant="8" id="eGI-i1-TqP"/>
                             <constraint firstItem="W9B-rb-qjY" firstAttribute="leading" secondItem="MQ3-fu-T8G" secondAttribute="leading" constant="10" id="hnr-ug-XM4"/>
-                            <constraint firstItem="KlQ-0H-MtU" firstAttribute="top" secondItem="oaL-ma-2eg" secondAttribute="bottom" constant="5" id="iqA-Wl-v7j"/>
-                            <constraint firstItem="KlQ-0H-MtU" firstAttribute="leading" secondItem="MfE-vE-LFf" secondAttribute="trailing" constant="10" id="mtD-gV-9DU"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -70,11 +73,11 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="audioButton" destination="MfE-vE-LFf" id="wmF-nJ-Dw6"/>
                 <outlet property="containerView" destination="MQ3-fu-T8G" id="BI3-1x-9ET"/>
                 <outlet property="meanLabel" destination="W9B-rb-qjY" id="yQb-ey-v19"/>
                 <outlet property="nameLabel" destination="oaL-ma-2eg" id="vyZ-fT-pXn"/>
-                <outlet property="symbolLabel" destination="KlQ-0H-MtU" id="Xcx-5V-7V5"/>
+                <outlet property="symbolButton" destination="3JE-d5-ZV9" id="sgT-TS-G3D"/>
+                <outlet property="widthConstraint" destination="hiC-qS-ocR" id="E2S-x9-wi0"/>
             </connections>
         </tableViewCell>
     </objects>

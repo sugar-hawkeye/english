@@ -76,12 +76,15 @@
 
 - (void)setPageOrientation:(PageOrientation)pageOrientation {
     _pageOrientation = pageOrientation;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self reload];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self reload];
+//    });
 }
 
-
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    NSLog(@"layoutSubviews");
+}
 
 - (void)reload {
     _fisrtVisibleNum = 0;
@@ -154,91 +157,88 @@
 
 #pragma mark -- UIScrollViewDelegate
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    PageView *firstView = [_visibleCells firstObject];
-    PageView *lastView = [_visibleCells lastObject];
-    if (_pageOrientation == PageOrientationVertical) {
-    
-        
-//        CGRect firstFrame = [_cellFrames]
-        
-        if (scrollView.contentOffset.y > _offY) {
-            if (_offY > (firstView.frame.origin.y + firstView.frame.size.height) && _offY >= 0) {
-                [_reuseCells addObject:firstView];
-                [firstView removeFromSuperview];
-                [_visibleCells removeObjectAtIndex:0];
-            }
-            
-            if ((_offY + scrollView.bounds.size.height) > (lastView.frame.origin.y + lastView.frame.size.height) && _offY <= _contentHeight) {
-                CGPoint point = CGPointMake(0, _offY+scrollView.bounds.size.height);
-                NSInteger index = -1;
-                CGRect viewFrame = CGRectZero;
-                for (int i = 0; i < _cellFrames.count; i++) {
-                    CGRect frame = [[_cellFrames objectAtIndex:i] CGRectValue];
-                    if (CGRectContainsPoint(frame, point)) {
-                        index = i;
-                        viewFrame = frame;
-                        break;
-                    }
-                }
-                if (index >= 0) {
-                    PageView *view = [_pageDataSource pageScrollView:self cellForRowAtIndex:index];
-                    view.frame = viewFrame;
-                    [self addSubview:view];
-                    [_visibleCells addObject:view];
-                }
-                
-            }
-
-        }
-        else{
-            if (_offY < firstView.frame.origin.y && _offY >= 0) {
-                CGPoint point = CGPointMake(0, _offY);
-                NSInteger index = -1;
-                CGRect viewFrame = CGRectZero;
-                for (int i = 0; i < _cellFrames.count; i++) {
-                    CGRect frame = [[_cellFrames objectAtIndex:i] CGRectValue];
-                    if (CGRectContainsPoint(frame, point)) {
-                        index = i;
-                        viewFrame = frame;
-                        break;
-                    }
-                }
-                if (index >= 0) {
-                    PageView *view = [_pageDataSource pageScrollView:self cellForRowAtIndex:index];
-                    view.frame = viewFrame;
-                    [self addSubview:view];
-                    [_visibleCells insertObject:view atIndex:0];
-                }
-            }
-         
-            
-            if (((_offY + scrollView.bounds.size.height) < lastView.frame.origin.y) && _offY <= _contentHeight) {
-                [_reuseCells addObject:lastView];
-                [lastView removeFromSuperview];
-                [_visibleCells removeLastObject];
-            }
-
-        }
-        
-        _offY = scrollView.contentOffset.y;
-        
-        
-        
-        
-           }
-    else if (_pageDataSource == PageOrientationHorizontal) {
-        
-    }
-}
-
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
-}
+//- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+//
+//}
+//
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    PageView *firstView = [_visibleCells firstObject];
+//    PageView *lastView = [_visibleCells lastObject];
+//    if (_pageOrientation == PageOrientationVertical) {
+//
+//        if (scrollView.contentOffset.y > _offY) {
+//            if (_offY > (firstView.frame.origin.y + firstView.frame.size.height) && _offY >= 0) {
+//                [_reuseCells addObject:firstView];
+//                [firstView removeFromSuperview];
+//                [_visibleCells removeObjectAtIndex:0];
+//            }
+//
+//            if ((_offY + scrollView.bounds.size.height) > (lastView.frame.origin.y + lastView.frame.size.height) && _offY <= _contentHeight) {
+//                CGPoint point = CGPointMake(0, _offY+scrollView.bounds.size.height);
+//                NSInteger index = -1;
+//                CGRect viewFrame = CGRectZero;
+//                for (int i = 0; i < _cellFrames.count; i++) {
+//                    CGRect frame = [[_cellFrames objectAtIndex:i] CGRectValue];
+//                    if (CGRectContainsPoint(frame, point)) {
+//                        index = i;
+//                        viewFrame = frame;
+//                        break;
+//                    }
+//                }
+//                if (index >= 0) {
+//                    PageView *view = [_pageDataSource pageScrollView:self cellForRowAtIndex:index];
+//                    view.frame = viewFrame;
+//                    [self addSubview:view];
+//                    [_visibleCells addObject:view];
+//                }
+//
+//            }
+//
+//        }
+//        else{
+//            if (_offY < firstView.frame.origin.y && _offY >= 0) {
+//                CGPoint point = CGPointMake(0, _offY);
+//                NSInteger index = -1;
+//                CGRect viewFrame = CGRectZero;
+//                for (int i = 0; i < _cellFrames.count; i++) {
+//                    CGRect frame = [[_cellFrames objectAtIndex:i] CGRectValue];
+//                    if (CGRectContainsPoint(frame, point)) {
+//                        index = i;
+//                        viewFrame = frame;
+//                        break;
+//                    }
+//                }
+//                if (index >= 0) {
+//                    PageView *view = [_pageDataSource pageScrollView:self cellForRowAtIndex:index];
+//                    view.frame = viewFrame;
+//                    [self addSubview:view];
+//                    [_visibleCells insertObject:view atIndex:0];
+//                }
+//            }
+//
+//
+//            if (((_offY + scrollView.bounds.size.height) < lastView.frame.origin.y) && _offY <= _contentHeight) {
+//                [_reuseCells addObject:lastView];
+//                [lastView removeFromSuperview];
+//                [_visibleCells removeLastObject];
+//            }
+//
+//        }
+//
+//        _offY = scrollView.contentOffset.y;
+//
+//
+//
+//
+//           }
+//    else if (_pageDataSource == PageOrientationHorizontal) {
+//
+//    }
+//}
+//
+//
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//
+//}
 
 @end

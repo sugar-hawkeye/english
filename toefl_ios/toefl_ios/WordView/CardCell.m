@@ -7,11 +7,20 @@
 //
 
 #import "CardCell.h"
+#import "UIView+Utils.h"
 
 @implementation CardCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:_containerView.bounds cornerRadius:10];
+        CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
+        shapeLayer.path = bezierPath.CGPath;
+        shapeLayer.frame = _containerView.bounds;
+        _containerView.layer.mask = shapeLayer;
+
+    });
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -26,13 +35,11 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-//    NSLog(@"%@",NSStringFromCGRect(_containerView.frame));
-    
-    UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:_containerView.bounds cornerRadius:10];
-    CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
-    shapeLayer.path = bezierPath.CGPath;
-    shapeLayer.frame = _containerView.bounds;
-    _containerView.layer.mask = shapeLayer;
+   
+
+//
+//    shapeLayer.borderColor = [UIColor redColor].CGColor;
+//    shapeLayer.borderWidth = 2;
 }
 
 - (void)setFrame:(CGRect)frame {

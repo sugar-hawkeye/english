@@ -12,17 +12,17 @@
 
 #import "Word.h"
 
+#import "UIView+Utils.h"
+
 @implementation WordCell
 
-- (void)setMean:(NSString*)mean {
-    _meanLabel.text = [mean split:@"[a-z]{1,5}\\." flag:@"\n"];
-}
 
 - (void)setWord:(Word *)word {
     _nameLabel.text = word.name;
-    _symbolLabel.text = word.symbol;
     _meanLabel.text = [word.mean split:@"[a-z]{1,5}\\." flag:@"\n"];
-    [_audioButton setPlayName:word.name];
+    [_symbolButton setSymbol:word.symbol];
+    [_symbolButton setPlayName:word.name];
+    _widthConstraint.constant = [_symbolButton getWidth];
 }
 
 @end

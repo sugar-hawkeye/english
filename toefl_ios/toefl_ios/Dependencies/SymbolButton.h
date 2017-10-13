@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SymbolButton : UIButton
+@interface SymbolButton : UIView
 
 - (void)setPlayName:(NSString*)name;
+- (void)setSymbol:(NSString*)symbol;
+
+- (CGFloat)getWidth;
 
 @end

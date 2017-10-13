@@ -58,13 +58,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     Word *word = [_datas objectAtIndex:indexPath.row];
-    NSString *mean = [word.mean split:@"[ a-z]\\." flag:@"\n"];;
+    NSString *mean = [word.mean split:@"[a-z]{1,5}\\." flag:@"\n"];
     WordCell *cell=(WordCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    cell.tag = indexPath.row;
     CGSize size = CGSizeMake(cell.meanLabel.frame.size.width, MAXFLOAT);
-    CGFloat height = [mean sizeWithFont:cell.meanLabel.font maxSize:size].height + 80;
-
+    CGFloat height = [mean sizeWithFont:cell.meanLabel.font maxSize:size].height + 85;
     return height;
 }
 

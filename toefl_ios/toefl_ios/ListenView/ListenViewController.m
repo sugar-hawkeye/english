@@ -13,6 +13,8 @@
 
 @interface ListenViewController ()<PageScrollViewDatasource>
 
+@property (nonatomic, strong) NSMutableArray *datas;
+@property (nonatomic, assign) NSInteger index;
 
 @property (nonatomic, strong) PageScrollView *pageScrollView;
 
@@ -27,6 +29,24 @@
     [_pageScrollView setPageOrientation:PageOrientationVertical];
     
     [self.view addSubview:_pageScrollView];
+    
+    _datas = [[NSMutableArray alloc] init];
+    _index = 0;
+    
+    [self setRightButton:[UIImage imageNamed:@"nav_downup_btn.png"] target:self action:@selector(touchRight)];
+}
+
+- (void)touchRight {
+    [self addData];
+    [_pageScrollView reload];
+}
+
+- (void)addData {
+    for (NSInteger i = _index; i < _index+10; i++) {
+        NSString *name = [NSString stringWithFormat:@"%ld",_index];
+        [_datas addObject:name];
+    }
+    _index += 10;
 }
 
 - (void)viewDidLayoutSubviews {
@@ -35,12 +55,11 @@
 }
 
 - (NSInteger)numberOfRow:(PageScrollView*)pageScrollView {
-    return 5;
+    return _datas.count;
 }
 
 - (CGFloat)pageScrollView:(PageScrollView*)pageScrollView heightForRowAtIndex:(NSInteger)index {
-    
-    return 200;
+    return 100;
 }
 
 - (CGFloat)pageScrollView:(PageScrollView*)pageScrollView widthForRowAtIndex:(NSInteger)index {
@@ -52,7 +71,7 @@
     PageView *view = [pageScrollView dequeueReusableCell];
     view.layer.borderColor = [UIColor redColor].CGColor;
     view.layer.borderWidth = 2;
-    view.textLabel.text = [NSString stringWithFormat:@"%ld",row];
+    view.textLabel.text = [_datas objectAtIndex:row];
     return view;
 }
 

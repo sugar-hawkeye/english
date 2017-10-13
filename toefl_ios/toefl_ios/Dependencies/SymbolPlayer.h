@@ -12,9 +12,14 @@
 
 @interface SymbolPlayer : NSObject
 
+
++ (SymbolPlayer *)singleton;
 - (instancetype)initWithName:(NSString *)name;
+
+- (void)setName:(NSString *)name;
 
 - (void)play;
 - (void)stop;
+- (BOOL)isPlaying;
 
 @end

@@ -9,15 +9,11 @@
 #import "CommonNavigationViewController.h"
 
 @class Word;
-@class CustomTextView;
+
 
 @interface WordDetailViewController : CommonNavigationViewController
 
-@property (nonatomic, weak) IBOutlet UIView *headerView;
-@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
-@property (nonatomic, weak) IBOutlet UILabel *symbolLabel;
-@property (nonatomic, weak) IBOutlet UILabel *meanLabel;
-@property (nonatomic, weak) IBOutlet CustomTextView *customTextView;
+
 
 - (void)setWord:(Word *)word;
 
