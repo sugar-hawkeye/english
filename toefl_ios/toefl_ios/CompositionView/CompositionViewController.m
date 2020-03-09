@@ -9,30 +9,34 @@
 #import "CompositionViewController.h"
 
 #import "NSString+Utils.h"
-#import "DBClient.h"
 
 #import "Composition.h"
 #import "CompositionCell.h"
 
+#import "CompositionDetailViewController.h"
+
 @interface CompositionViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) DBClient *dbClient;
-@property (nonatomic, strong) NSMutableArray *datas;
-
+@property (nonatomic, copy) NSMutableArray *datas;
+@property (nonatomic, strong) CompositionDetailViewController *compositionDetailViewController;
 @end
 
 @implementation CompositionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _dbClient = [[DBClient alloc] init];
-    _datas = [_dbClient getDataFromComposition];
+    _compositionDetailViewController = [[CompositionDetailViewController alloc] init];
     
     UINib *nibCell = [UINib nibWithNibName:@"CompositionCell" bundle:nil];
     [_tableView registerNib:nibCell forCellReuseIdentifier:@"CompositionCell"];
     _tableView.scrollsToTop = YES;
 }
 
+
+- (void)setData:(NSMutableArray*)data {
+    _datas = data;
+    [_tableView reloadData];
+}
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -55,8 +59,13 @@
     CGSize size = CGSizeMake(cell.titleLabel.frame.size.width, MAXFLOAT);
     CGFloat height = [composition.title sizeWithFont:cell.titleLabel.font maxSize:size].height + 20;
     
-    
     return height;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Composition *composition = [_datas objectAtIndex:indexPath.row];
+    [_compositionDetailViewController setComposition:composition];
+    [self.navigationController pushViewController:_compositionDetailViewController animated:YES];
 }
 
 @end

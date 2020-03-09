@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompositionTypeViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkr-mH-FcS">
+                    <rect key="frame" x="30" y="50" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="05W-Us-jrk"/>
+                        <constraint firstAttribute="width" constant="100" id="qvR-eF-myi"/>
+                    </constraints>
+                    <state key="normal" title="小学作文">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="touchXXEvent:" destination="-1" eventType="touchUpInside" id="dvx-IL-o7H"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYS-Sx-fqw">
+                    <rect key="frame" x="245" y="50" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="X9M-wR-aNj"/>
+                        <constraint firstAttribute="height" constant="100" id="x7l-cX-NFV"/>
+                    </constraints>
+                    <state key="normal" title="初中作文">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="touchCZEvent:" destination="-1" eventType="touchUpInside" id="8wN-HI-2Ii"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhk-xU-vZv">
+                    <rect key="frame" x="30" y="180" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Oef-X8-49p"/>
+                        <constraint firstAttribute="width" constant="100" id="oLc-6m-QH9"/>
+                    </constraints>
+                    <state key="normal" title="高中作文">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="touchGZEvent:" destination="-1" eventType="touchUpInside" id="PfT-P1-AoS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssV-nG-Z1Z">
+                    <rect key="frame" x="245" y="180" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="1He-cQ-jKH"/>
+                        <constraint firstAttribute="height" constant="100" id="4WD-4J-YMu"/>
+                    </constraints>
+                    <state key="normal" title="大学作文">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="touchDXEvent:" destination="-1" eventType="touchUpInside" id="H2J-Q5-nvw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lkr-mH-FcS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="0bc-MQ-nw0"/>
+                <constraint firstItem="Yhk-xU-vZv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="LSS-rB-pqm"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="VYS-Sx-fqw" secondAttribute="trailing" constant="30" id="Ska-aV-nQQ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ssV-nG-Z1Z" secondAttribute="trailing" constant="30" id="eji-pM-hMI"/>
+                <constraint firstItem="lkr-mH-FcS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="exo-Vf-S3k"/>
+                <constraint firstItem="ssV-nG-Z1Z" firstAttribute="top" secondItem="VYS-Sx-fqw" secondAttribute="bottom" constant="30" id="nMD-3h-Hqa"/>
+                <constraint firstItem="VYS-Sx-fqw" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="qgQ-kn-V66"/>
+                <constraint firstItem="Yhk-xU-vZv" firstAttribute="top" secondItem="lkr-mH-FcS" secondAttribute="bottom" constant="30" id="tfW-9F-EXX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

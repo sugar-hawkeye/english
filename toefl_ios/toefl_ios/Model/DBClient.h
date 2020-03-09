@@ -17,4 +17,7 @@ static const NSInteger limit = 100;
 
 - (NSMutableArray *)getDataFromComposition;
 
+- (NSMutableArray *)getCompositionWithType:(int)type;
+- (BOOL)setCompositionFavorite:(BOOL)fav inTable:(NSString*)table titleID:(int)titleID;
+
 @end

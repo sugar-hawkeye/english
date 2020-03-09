@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -30,7 +30,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-rb-qjY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-rb-qjY">
                                 <rect key="frame" x="10" y="57" width="280" height="18"/>
                                 <attributedString key="attributedText">
                                     <fragment content="asdasda">
@@ -43,23 +43,35 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3JE-d5-ZV9" customClass="SymbolButton">
-                                <rect key="frame" x="10" y="32" width="280" height="25"/>
+                                <rect key="frame" x="10" y="32" width="240" height="25"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="hiC-qS-ocR"/>
+                                    <constraint firstAttribute="width" constant="240" id="hiC-qS-ocR"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q67-5b-fdp">
+                                <rect key="frame" x="255" y="0.0" width="40" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="TUE-Mj-l5I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="q67-5b-fdp" secondAttribute="bottom" id="3kT-lj-YN2"/>
                             <constraint firstAttribute="bottom" secondItem="W9B-rb-qjY" secondAttribute="bottom" constant="5" id="4hS-iR-S0X"/>
                             <constraint firstItem="oaL-ma-2eg" firstAttribute="leading" secondItem="MQ3-fu-T8G" secondAttribute="leading" constant="10" id="8M1-iU-DcA"/>
                             <constraint firstItem="3JE-d5-ZV9" firstAttribute="top" secondItem="oaL-ma-2eg" secondAttribute="bottom" id="E0s-XI-b9F"/>
+                            <constraint firstItem="q67-5b-fdp" firstAttribute="top" secondItem="MQ3-fu-T8G" secondAttribute="top" id="ERQ-PO-KVd"/>
                             <constraint firstItem="3JE-d5-ZV9" firstAttribute="leading" secondItem="MQ3-fu-T8G" secondAttribute="leading" constant="10" id="GyE-UG-VAT"/>
                             <constraint firstItem="oaL-ma-2eg" firstAttribute="top" secondItem="MQ3-fu-T8G" secondAttribute="top" constant="10" id="Hga-sa-Kfv"/>
                             <constraint firstItem="W9B-rb-qjY" firstAttribute="top" secondItem="3JE-d5-ZV9" secondAttribute="bottom" id="HnG-kt-wqf"/>
                             <constraint firstAttribute="trailing" secondItem="W9B-rb-qjY" secondAttribute="trailing" constant="10" id="Jfl-KA-POK"/>
                             <constraint firstItem="W9B-rb-qjY" firstAttribute="leading" secondItem="MQ3-fu-T8G" secondAttribute="leading" constant="10" id="hnr-ug-XM4"/>
+                            <constraint firstAttribute="trailing" secondItem="q67-5b-fdp" secondAttribute="trailing" constant="5" id="yQG-I2-ReX"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -76,6 +88,7 @@
                 <outlet property="containerView" destination="MQ3-fu-T8G" id="BI3-1x-9ET"/>
                 <outlet property="meanLabel" destination="W9B-rb-qjY" id="yQb-ey-v19"/>
                 <outlet property="nameLabel" destination="oaL-ma-2eg" id="vyZ-fT-pXn"/>
+                <outlet property="rowLabel" destination="q67-5b-fdp" id="tKL-xQ-daU"/>
                 <outlet property="symbolButton" destination="3JE-d5-ZV9" id="sgT-TS-G3D"/>
                 <outlet property="widthConstraint" destination="hiC-qS-ocR" id="E2S-x9-wi0"/>
             </connections>

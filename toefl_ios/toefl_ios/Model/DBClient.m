@@ -34,6 +34,7 @@
 
 
 
+
 - (NSMutableArray *)getDataAtPage:(NSString *)page {
     NSMutableArray *data = [[NSMutableArray alloc] init];
     
@@ -77,7 +78,57 @@
     return data;
 }
 
+- (NSMutableArray *)getCompositionWithType:(int)type {
+    NSMutableArray *data = [[NSMutableArray alloc] init];
+    
+    NSString *typeStr = @"";
+    if (type == 1) {
+        typeStr = @"composition_xx";
+    }
+    else if (type == 2){
+        typeStr = @"composition_cz";
+    }
+    else if (type == 3){
+        typeStr = @"composition_gz";
+    }
+    else if (type == 4){
+        typeStr = @"composition_dx";
+    }
+    NSString *sql = [NSString stringWithFormat:@"select * from %@",typeStr];
+    
+    [_queue inDatabase:^(FMDatabase * _Nonnull db) {
+        FMResultSet *rs = [db executeQuery:sql];
+        while ([rs next]) {
+            Composition *composition = [[Composition alloc] init];
+            composition.titleID = [rs intForColumn:@"id"];
+            composition.title = [rs stringForColumn:@"title"];
+            composition.content = [rs stringForColumn:@"content"];
+            composition.category = [rs intForColumn:@"category"];
+            composition.isStore = [rs intForColumn:@"isStore"];
+            [data addObject:composition];
+        }
+        [rs close];
+    }];
+    [_queue close];
+    return data;
+}
 
+- (BOOL)setCompositionFavorite:(BOOL)fav inTable:(NSString*)table titleID:(int)titleID{
+    int value;
+    if (fav) {
+        value = 1;
+    }
+    else {
+        value = 0;
+    }
+    __block BOOL isSuccess;
+    NSString *sql = [NSString stringWithFormat:@"update favorite set isStore = %d where id=%d",value,titleID];
+    [_queue inDatabase:^(FMDatabase * _Nonnull db) {
+         isSuccess = [db executeUpdate:sql];
+    }];
+    [_queue close];
+    return isSuccess;
+}
 
 - (NSInteger)getCount:(NSString *)tableName
 {

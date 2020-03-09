@@ -12,6 +12,7 @@
 #import "ProfileViewController.h"
 #import "ListenViewController.h"
 #import "CompositionViewController.h"
+#import "CompositionTypeViewController.h"
 
 
 @interface CommonTabbarViewController (){
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) ListenViewController *listenViewController;
 @property (nonatomic, strong) CompositionViewController *compositionViewController;
 @property (nonatomic, strong) ProfileViewController *profileViewController;
+@property (nonatomic, strong) CompositionTypeViewController *compositionTypeViewController;
 @property (nonatomic, strong) NSMutableArray *items;
 
 @end
@@ -56,10 +58,11 @@
     _listenViewController = [[ListenViewController alloc] init];
     _compositionViewController = [[CompositionViewController alloc] init];
     _profileViewController = [[ProfileViewController alloc] init];
+    _compositionTypeViewController = [[CompositionTypeViewController alloc] init];
     
     _wordNav = [[UINavigationController alloc] initWithRootViewController:_wordViewController];
     _listenNav = [[UINavigationController alloc] initWithRootViewController:_listenViewController];
-    _compositionNav = [[UINavigationController alloc] initWithRootViewController:_compositionViewController];
+    _compositionNav = [[UINavigationController alloc] initWithRootViewController:_compositionTypeViewController];
     _profileNav = [[UINavigationController alloc] initWithRootViewController:_profileViewController];
     
     NSDictionary *wordDic = [NSDictionary dictionaryWithObjectsAndKeys:_wordNav,ViewKey,

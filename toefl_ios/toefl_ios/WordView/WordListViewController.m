@@ -54,6 +54,7 @@
     WordCell *wordCell = [tableView dequeueReusableCellWithIdentifier:@"WordCell"];
     Word *word = (Word*)[_datas objectAtIndex:indexPath.row];
     [wordCell setWord:word];
+    wordCell.rowLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row+1];
     return wordCell;
 }
 

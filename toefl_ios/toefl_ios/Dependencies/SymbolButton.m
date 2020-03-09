@@ -101,6 +101,9 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (!_symbolPlayer) {
+        _symbolPlayer = [SymbolPlayer singleton];
+    }
     [_symbolPlayer setName:_name];
     [_symbolPlayer play];
 }

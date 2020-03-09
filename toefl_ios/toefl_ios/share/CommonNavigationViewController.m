@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIImage *backImage;
 
+
 @end
 
 @implementation CommonNavigationViewController
@@ -53,6 +54,24 @@
     UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:button];
     self.navigationItem.rightBarButtonItem = rightBar;
 }
+
+- (void)setRightButton:(UIImage*)image selectImage:(UIImage*)selectImage target:(id)target action:(SEL)action {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.titleLabel.font = [UIFont systemFontOfSize:13];
+    button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
+    if (image) {
+        //        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0 , 0, 13)];
+        [button setImage:image forState:UIControlStateNormal];
+        [button setImage:selectImage forState:UIControlStateSelected];
+        button.frame = CGRectMake(0, 0, 50, 49);
+    }
+    
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:button];
+    self.navigationItem.rightBarButtonItem = rightBar;
+    _rightButton = button;
+}
+
 
 - (void)setCloseButton {
     

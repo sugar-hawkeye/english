@@ -104,6 +104,7 @@
     if (range.location != NSNotFound) {
         [attributedStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
     }
+    [attributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:18] range:NSMakeRange(0, [content length])];
     return attributedStr;
 }
 

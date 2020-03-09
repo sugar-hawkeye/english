@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet SymbolButton *symbolButton;
 @property (nonatomic, weak) IBOutlet UILabel *meanLabel;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *widthConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *rowLabel;
 
 - (void)setWord:(Word *)word;
 
